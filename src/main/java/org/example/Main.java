@@ -31,10 +31,12 @@ public class Main {
         //Utilizando Comparator não precisamos implementar Comparable em Pessoa
         //pessoas.sort(Comparator.comparing(p -> p.getName()));
 
+        pessoas.sort(Comparator.comparing(p -> p.getAge()));
+
         //deste modo precisamos implmementar Comparable em Pessoas
-        Collections.sort(pessoas);
+        //Collections.sort(pessoas);
 
         System.out.println("======================");
-        pessoas.forEach(p -> System.out.println(p.getName()));
+        pessoas.forEach(p -> System.out.println(p.getName() + " - " + p.getAge()));
     }
 }
